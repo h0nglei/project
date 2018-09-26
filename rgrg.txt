@@ -1,0 +1,38 @@
+import time
+#１使用全局函数来装饰类方法
+#2 使用类方法来装饰类方法
+#3　使用类内置方法来装饰类方法
+def a_(fun):
+    ******
+
+class A(object):
+    def __init__(self):
+        self.a = 100
+
+    @a_#使用全局函数装饰
+    def func(self, num):
+        ******
+
+    def b_(fun):
+        ******
+
+    @b_#使用类内方法装饰
+    def func1(self, num):
+        ******
+
+c = A()
+c_ = c.func(100)
+print(c_)　#  200
+c_1 = c .func1(102)
+print(c_1) # 202
+
+
+class B(object):
+    def __init__(self):
+        ******
+
+@B#使用类来装饰
+def cc(num,num1):
+    return num+num1
+d = cc (11,22) # 33
+print(d)
